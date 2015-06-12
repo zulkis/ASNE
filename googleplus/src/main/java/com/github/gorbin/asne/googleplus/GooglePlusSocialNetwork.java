@@ -27,7 +27,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 
 import com.github.gorbin.asne.core.AccessToken;
 import com.github.gorbin.asne.core.SocialNetwork;

@@ -24,7 +24,7 @@ package com.github.gorbin.asne.odnoklassniki;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.text.TextUtils;
 
 import com.github.gorbin.asne.core.AccessToken;

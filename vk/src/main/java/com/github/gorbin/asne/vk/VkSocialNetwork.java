@@ -155,7 +155,7 @@ public class VkSocialNetwork extends SocialNetwork {
     /*** Get current user id after authorization for inner use*/
     private void requestIdPerson() {
         VKRequest request = VKApi.users().get(VKParameters.from(VKApiConst.FIELDS,"id"));
-        request.secure = false;
+        request.secure = true;
         request.executeWithListener(new VKRequest.VKRequestListener() {
             @Override
             public void onComplete(VKResponse response) {
@@ -273,7 +273,7 @@ public class VkSocialNetwork extends SocialNetwork {
             ));
             current = false;
         }
-        request.secure = false;
+        request.secure = true;
         request.useSystemLanguage = true;
         request.executeWithListener(new VKRequest.VKRequestListener() {
             @Override
@@ -323,7 +323,7 @@ public class VkSocialNetwork extends SocialNetwork {
         VKRequest request = VKApi.users().get(VKParameters.from(VKApiConst.USER_IDS, userIds, VKApiConst.FIELDS,
                 "id,first_name,last_name,photo_max_orig"
         ));
-        request.secure = false;
+        request.secure = true;
         request.useSystemLanguage = true;
         request.executeWithListener(new VKRequest.VKRequestListener() {
             @Override
@@ -382,7 +382,7 @@ public class VkSocialNetwork extends SocialNetwork {
                 "can_see_all_posts,can_write_private_message,status"
         ));
         }
-        request.secure = false;
+        request.secure = true;
         request.useSystemLanguage = true;
         request.executeWithListener(new VKRequest.VKRequestListener() {
             @Override

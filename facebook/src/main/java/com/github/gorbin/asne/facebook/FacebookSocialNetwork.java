@@ -668,7 +668,7 @@ public class FacebookSocialNetwork extends SocialNetwork {
 
         Session session = Session.getActiveSession();
         int sanitizedRequestCode = requestCode % 0x10000;
-        if (session != null) {
+        if (session != null && mSocialNetworkManager.getActivity() != null) {
             session.onActivityResult(mSocialNetworkManager.getActivity(), sanitizedRequestCode, resultCode, data);
         }
 

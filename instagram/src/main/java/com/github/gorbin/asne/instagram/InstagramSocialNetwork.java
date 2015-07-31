@@ -594,8 +594,9 @@ public class InstagramSocialNetwork extends OAuthSocialNetwork {
             mRequests.remove(REQUEST_LOGIN2);
             if (mLocalListeners.get(REQUEST_LOGIN) != null && !restart) {
                 ((OnLoginCompleteListener) mLocalListeners.get(REQUEST_LOGIN)).onLoginSuccess(getID());
+            } else {
+                restartRequests();
             }
-            restartRequests();
         }
 
 
